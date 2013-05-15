@@ -5,3 +5,4 @@ class window.Task extends Backbone.Model
 
   complete: ->
     # ========YOUR CODE HERE=========
+    # Should change status & trigger an event
