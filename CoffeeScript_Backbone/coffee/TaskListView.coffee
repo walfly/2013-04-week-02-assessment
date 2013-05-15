@@ -8,15 +8,13 @@ class window.TaskListView extends Backbone.View
 
   className: 'container'
 
-  $el: $ """
-    <div class='container'>
+  initialize: ->
+
+    @$el.html """
       <div>Remaining tasks: <span class='tasks-remaining'></span></div>
       <br />
       <div class='task-list'></div>
-    </div>
-  """
-
-  initialize: ->
+    """
 
     # instantiate the tasks collection, with some initial tasks
     @collection = new Tasks taskData
