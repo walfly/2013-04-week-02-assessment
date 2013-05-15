@@ -16,5 +16,21 @@ var tweet = {
 };
 
 // Write your GET request here
+$.ajax(url, {
+	type: "GET",
+	contentType: "application/JSON",
+	data:{order: "-createdAt"},
+	success: function(data){
+		console.log(data.results[0].username, data.results[0].text);
+	}
+})
 
 // Write your POST request here
+$.ajax(url, {
+	type: "POST",
+	contentType: "application/JSON",
+	data: JSON.stringify(tweet),
+	success: function(data){
+		console.log(success);
+	}
+})
