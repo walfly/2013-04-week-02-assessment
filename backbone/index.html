@@ -1,0 +1,16 @@
+<html>
+  <head>
+  </head>
+  <body>
+    <script src="lib/jquery.js"></script>
+    <script src="lib/underscore.js"></script>
+    <script src="lib/backbone.js"></script>
+    <script src="userModel.js"></script>
+    <script src="changePasswordView.js"></script>
+
+    <script type="text/javascript">
+      var bob = new User({name: 'Bob', password: 'bacon'});
+      var passView = new ChangePasswordView({model: bob});
+    </script>
+  </body>
+</html>

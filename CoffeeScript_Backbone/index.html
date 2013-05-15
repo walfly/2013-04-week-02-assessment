@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <title>CoffeeScript</title>
+  </head>
+  <body>
+    <script src="lib/jquery.js"></script>
+    <script src="lib/underscore.js"></script>
+    <script src="lib/backbone.js"></script>
+
+    <script src="js/taskData.js"></script>
+    <script src="js/Task.js"></script>
+    <script src="js/Tasks.js"></script>
+    <script src="js/TaskView.js"></script>
+    <script src="js/TaskListView.js"></script>
+    <script>
+      new TaskListView().$el.appendTo('body');
+    </script>
+  </body>
+</html>
