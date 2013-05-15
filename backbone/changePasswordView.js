@@ -1,1 +1,3 @@
-// Create your change password form view here
+var ChangePasswordView = Backbone.View.extend({
+  /* Fill out your solution here */
+});
