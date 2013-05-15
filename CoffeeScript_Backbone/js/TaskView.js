@@ -12,10 +12,10 @@
       return _ref;
     }
 
-    TaskView.prototype.template = "<div class='task'><%= title %></div>";
+    TaskView.prototype.template = _.template("<div class='task'><%= title %></div>");
 
     TaskView.prototype.render = function() {
-      if (this.model.completionStatus) {
+      if (this.model.get("completionStatus")) {
         this.$el.addClass('crossed-out');
       }
       return this.$el.html(this.template(this.model.attributes));

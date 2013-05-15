@@ -31,7 +31,7 @@ class window.TaskListView extends Backbone.View
     # clear the task list before re-draw
     @$('.task-list').children().detach()
     # re-draw the list of tasks by mapping over @collection
-    @$('.task-list').append @collection.incompleteItems().map (task)-> new TaskView(task).render()
+    @$('.task-list').append @collection.incompleteItems().map (task)-> new TaskView({model:task}).render()
 
     # update span to show num of tasks remaining by calling tasksRemaining() on collection
     @$('.tasks-remaining').html @collection.tasksRemaining()
