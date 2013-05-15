@@ -14,6 +14,13 @@
 
     TaskView.prototype.template = _.template("<div class='task'><%= title %></div>");
 
+    TaskView.prototype.events = {
+      "click": function() {
+        this.model.complete();
+        return this.render();
+      }
+    };
+
     TaskView.prototype.render = function() {
       if (this.model.get("completionStatus")) {
         this.$el.addClass('crossed-out');
